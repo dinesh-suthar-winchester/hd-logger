@@ -1,0 +1,18 @@
+{
+    "name": "winchester/hd-logger",
+    "description": "A laravel package for logging errors,exceptions and information into mysql database table",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dinesh Suthar",
+            "email": "dineshs@winchestertechnologies.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Winchester\\HdLogger\\": "src/"
+        }
+    }
+}
