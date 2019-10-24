@@ -24,6 +24,6 @@ class HdLogger extends Model
 
     public static function getLogs($per_page = 10)
     {
-        return self::paginate($per_page);
+        return self::orderby('created_at','desc')->paginate($per_page);
     }
 }

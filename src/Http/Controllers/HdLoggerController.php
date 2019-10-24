@@ -10,7 +10,7 @@ class HdLoggerController extends Controller
 {
     public function viewLogs(Request $request)
     {
-        $per_page = $request->per_page ?? 10;
+        $per_page = $request->per_page ?? 5;
 
         $logs = HdLogger::getLogs($per_page);
         return view('hdlogger::view_logs', compact('logs'));
