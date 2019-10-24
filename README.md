@@ -48,7 +48,7 @@ use Hdlogger;
 
 public function controllerMethod()
 {
-    Hdlogger:instant('Log this line in database'); // Example of usage
+    Hdlogger::instant('Log this line in database'); // Example of usage
 }
 ```
 
