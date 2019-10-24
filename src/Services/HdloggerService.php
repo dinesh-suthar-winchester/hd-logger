@@ -7,10 +7,16 @@ use Illuminate\Support\Facades\Request;
 
 class HdloggerService
 {
-    public function insertLogger($type, $code=null, $message, $filename, $line_no)
+    public function insertLogger($exception)
     {
+
+        $code = $exception->getCode();
+        $message = $exception->getMessage();
+        $filename = $exception->getFile();
+        $line_no = $exception->getLine();
+
         HdLogger::createLog([
-            'type' => $type,
+            'type' => 2,
             'code' => $code,
             'message' => $message,
             'file_name' => $filename,

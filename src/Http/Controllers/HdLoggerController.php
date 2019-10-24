@@ -15,4 +15,16 @@ class HdLoggerController extends Controller
         $logs = HdLogger::getLogs($per_page);
         return view('hdlogger::view_logs', compact('logs'));
     }
+
+    public function clearSingleLog($id)
+    {
+        HdLogger::deleteLog($id);
+        return redirect()->route('hd.logger.view.logs');
+    }
+
+    public function clearAllLogs()
+    {
+        HdLogger::deleteAllLogs();
+        return redirect()->route('hd.logger.view.logs');
+    }
 }
