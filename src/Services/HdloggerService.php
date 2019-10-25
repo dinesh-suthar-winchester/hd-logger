@@ -32,7 +32,7 @@ class HdloggerService
             'type' => 1,
             'code' => 0,
             'message' => $message,
-            'file_name' => Request::route()->getActionMethod(),
+            'file_name' => Request::route()->getActionMethod() ?? '',
             'line_no' => $debug[0]['line'],
         ]);
     }
