@@ -37,3 +37,22 @@ public function report(Exception $exception)
     parent::report($exception);
 }
 ```
+
+
+# Log general info in runtime
+
+in your controller class:
+
+```
+use Hdlogger;
+
+public function controllerMethod()
+{
+    Hdlogger::instant('Log this line in database'); // Example of usage
+}
+```
+
+# View generated logs url
+
+Simply append `/hd-logger` at end of your base url.
+Example: `http://localhost:8000/hd-logger`
