@@ -7,13 +7,7 @@ a custom laravel error logger which saves data into mysql table
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-# Database migration:
-
-`php artisan migrate`
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-# config/app.php:
+# Edit config/app.php:
 
 Add these lines
 
@@ -24,6 +18,15 @@ Service Provider Array:
 Aliases Array:
 
 `'Hdlogger' => Winchester\HdLogger\Facades\HdLoggerFacade::class`
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# Database migration:
+
+`php artisan migrate`
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 # Update app/Exceptions/handler.php
 
